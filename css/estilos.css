@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #F5F5F5;
+}
+
+header{
+    height: 100px;
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 180px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Coloca la imagen encima del texto */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px; /* Ajusta el ancho según necesites */
+
+    
+}
+.menu nav ul li img{
+
+    max-height: 50px;
+    
+}
+
+
+.menu nav ul li p{
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+    
+    
+}
+
+.menu nav ul li a:hover{
+    opacity: 0.6;
+}
+
+.btn__header-register,
+.btn__register-cover{
+    padding: 14px 50px;
+    border: none;
+    background: #000;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+}
+
+
+.btn__header-register:hover,
+.btn__register-cover:hover{
+    background: #94BDB9;
+    color: #000;
+}
+
+#icon_menu{
+    display: none;
+}
+
+/*PORTADA - COVER*/
+
+main{
+    max-width: 1200px;
+    height: calc(100vh + 800px);
+    padding: 40px;
+    margin: auto;
+}
+
+.cover {
+    display: flex; /* Activa el modelo Flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    padding: 20px;
+}
+
+/* Contenedor de la información (lado izquierdo) */
+.text__information-cover {
+    flex: 1; /* Toma todo el espacio disponible, menos lo que ocupe la imagen */
+    padding-right: 20px; /* Espacio a la derecha para que no esté pegado con la imagen */
+}
+
+/* Contenedor de la imagen (lado derecho) */
+.media__cover {
+    width: 100px; /* Define el ancho de la imagen */
+    height: 100px; /* Define la altura de la imagen */
+}
+
+#icon_user {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: 100%; /* La imagen ocupa el 100% del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+/* Estilos de los botones */
+.buttons__cover {
+    margin-top: 20px;
+}
+
+.buttons__cover input {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/*BANNER*/
+
+.container__banner{
+    margin-top: 80px;
+}
+
+.banner {
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fcfcfc;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding-left: 20px; /* Asegura espacio para el icono */
+}
+
+/* Ajustar el icono a la izquierda */
+.banner__icon-heart {
+    width: 120px; /* Tamaño fijo para evitar que se deforme */
+    height: 120px; /* Asegura que la imagen tenga siempre la misma proporción */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el icono se reduzca */
+}
+
+/* Asegurar que la imagen no cambie de tamaño */
+.banner__icon-heart img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Mantiene la imagen sin recortes ni cambios de tamaño raros */
+}
+
+
+.banner__text{
+    width: 60%;
+    position: relative;
+    padding: 40px;
+}
+
+.banner__text h2{
+    color: #000000;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.banner__text a{
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    color: #94BDB9;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 300ms;
+}
+
+.banner__text a:hover{
+    color: #94BDB9;
+}
+
+.banner__icon-fire{
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+
+#icon_fire{
+    width: 300px;
+    position: relative;
+    margin-top: -100px;
+    opacity: 0.6;
+}
+
+
+@media (max-width: 1024px){
+
+    .container__header {
+        display: flex;
+        justify-content: space-between; /* Espacio entre logo y menú */
+        align-items: center; /* Alinea verticalmente los elementos */
+        padding: 10px 20px;
+    }
+    
+    /* Estilos para el logo */
+    .container__header .logo {
+        flex: 1;
+        display: flex;
+        padding-top:50px;
+        justify-content: center; /* Centra el logo horizontalmente */
+
+    }
+
+    .menu {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0px;
+        z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+     
+  
+    }
+    
+    .menu nav ul {
+        display: flex;
+        justify-content: center;
+         /* Permite que los elementos se acomoden en varias líneas si es necesario */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .menu nav ul li {
+        padding: 8px 20px; /* Reduje el padding para que no sean tan grandes */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: white;
+        text-align: center;
+        box-sizing: border-box; /* Evita que padding y border aumenten el tamaño */
+    }
+    .menu nav ul li img{
+
+        max-height: 50px;
+    }
+    .menu nav ul li p{
+
+        display:none;
+    }
+    
+    .menu nav ul li:hover {
+        background-color: aliceblue;
+    }
+    
+    .menu nav ul li a {
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    
+
+    .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
+        height: 235px;
+    }
+
+    .text__information-cover h1{
+        font-size: 40px;
+    }
+
+
+
+    .banner__text h2{
+        font-size: 22px;
+    }
+
+
+
+}
+
+@media (max-width: 920px){
+    .text__information-cover{
+        width: 100%;
+    }
+
+    .media__cover{
+        display: none;
+    }
+
+    .banner{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .banner__text{
+        width: 75%;
+        position: relative;
+        padding: 30px;
+    }
+
+    #icon_fire{
+        display: none;
+    }
+
+    #icon_heart{
+        left: 0;
+    }
+    .menu nav ul li p{
+        font-size: 8px;
+
+        color: #000;
+        transition: opacity 300ms;
+    }
+    .menu nav ul li img{
+
+        max-height: 30px;
+    }
+
+}
+@media (max-width: 620px){
+
+    .banner__icon-heart{
+        width: 20%;
+        height: 100%;
+    }
+
+
+    .banner__text h2{
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+}
+@media (max-width: 550px){
+
+    .banner__icon-heart{
+        width: 20%;
+        height: 100%;
+    }
+
+    .banner__text{
+        width: 70%;
+        position: relative;
+        padding: 30px;
+    }
+    .banner__text h2{
+        color: #000000;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+}
